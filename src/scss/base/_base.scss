@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @media screen and (max-width: 520px) {
+    font-size: 1.923vw;
+  }
+}
+
+body {
+  background: var(--clr-bg-1);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.body--scroll-disabled {
+  overflow: hidden;
+}
+
+.page--fs {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    margin-top: auto;
+  }
+}
+
+section {
+  @include section-mb;
+}
+
+.maxw-105 {
+  max-width: 105rem;
+}
+
+.section-mod {
+  @include section-mb;
+}

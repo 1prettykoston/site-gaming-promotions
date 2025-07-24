@@ -1,0 +1,7 @@
+@mixin section-mb {
+  margin-bottom: 10rem;
+
+  @media screen and (max-width: 968px) {
+    margin-bottom: 5rem;
+  }
+}

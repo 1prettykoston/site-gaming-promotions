@@ -1,0 +1,28 @@
+<header class="header">
+      <div class="container">
+        @@include('logo.html')
+    
+        <nav class="header__nav">
+          <ul>
+            <li @@if (page === 'home') { class="current" }><a href="index.html">Home</a></li>
+            <li @@if (page === 'about') { class="current" }><a href="about.html">About</a></li>
+            <li @@if (page === 'responsibility') { class="current" }><a href="responsibility.html">Responsible Gaming</a></li>
+            <li @@if (page === 'contact') { class="current"}><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <ul class="header__nav--terms">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookies-policy.html">Cookies Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          </ul>
+
+        </nav>
+    
+        <div class="burger">
+          <div class="burger__top"></div>
+          <div class="burger__middle"></div>
+          <div class="burger__bottom"></div>
+        </div>
+      </div>
+  </header>
+    

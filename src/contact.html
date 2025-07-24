@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {title: 'FindYourTopSlotUK - Contact Us'})
+
+  <body>
+    <div class="page--fs">
+      @@include('html/header.html',{page: 'contact'})
+
+      <main>
+        <section class="contact">
+          <div class="pg-ovrvw pg-ovrvw--contact">
+            <div class="container pg-ovrvw__content">
+              <h1>Contact Us</h1>
+
+              <p>
+                If you have any questions regarding responsible gaming or need
+                further assistance, feel free to contact us.
+              </p>
+            </div>
+          </div>
+
+          <form class="container form form--contact form--no-action">
+            <label>
+              Your name
+              <input type="text" name="name" placeholder="Name" />
+            </label>
+
+            <label>
+              Your e-mail address
+              <input type="text" name="email" placeholder="E-mail address" />
+            </label>
+
+            <label for="message">
+              Your message
+              <textarea id="message" placeholder="Message"></textarea>
+            </label>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </section>
+      </main>
+      @@include('html/footer.html',{})
+    @@include('html/pop-up-cookie.html',{})
+
+    </div>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

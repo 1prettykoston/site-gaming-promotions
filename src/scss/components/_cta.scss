@@ -1,0 +1,90 @@
+.cta-contact {
+  padding-top: 2rem;
+  position: relative;
+
+  &--section-mod {
+    @include section-mb;
+  }
+
+  &__content {
+    position: relative;
+    border-radius: 3.2rem;
+    padding: 4.8rem;
+
+    background: radial-gradient(
+          circle closest-side,
+          var(--clr-bg-circle),
+          transparent 100%
+        )
+        right -30rem bottom -50rem / 100rem 100rem no-repeat,
+      var(--clr-bg-2);
+
+    @media screen and (max-width: 968px) {
+      padding: 3rem 4rem;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 680px) {
+      padding: 2rem;
+    }
+
+    .cta-contact__title,
+    .cta-contact__desc,
+    .form {
+      position: relative;
+      max-width: 60rem;
+      z-index: 5;
+
+      @media screen and (max-width: 968px) {
+        max-width: 50rem;
+      }
+
+      @media screen and (max-width: 740px) {
+        max-width: unset;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+      height: calc(100% + 8rem);
+      width: 40%;
+      background: bottom right / contain no-repeat
+        url("./../img/common/bg-cta-contact.png");
+      z-index: 1;
+
+      @media screen and (max-width: 968px) {
+        right: -4rem;
+        width: 35%;
+      }
+
+      @media screen and (max-width: 740px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: var(--font-family-2);
+    font-size: 4.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 968px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 680px) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+  }
+}

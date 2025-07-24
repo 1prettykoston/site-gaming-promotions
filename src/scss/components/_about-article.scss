@@ -1,0 +1,132 @@
+.about {
+  @include section-mb;
+}
+
+.about-article {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(30rem, 50rem) minmax(40rem, 60rem);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    @media screen and (max-width: 968px) {
+      display: block;
+
+      .about-article__img {
+        float: left;
+        width: 30rem;
+        margin: 0 2rem 0 0;
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      .about-article__img {
+        order: 1;
+        float: unset;
+        margin: unset;
+        width: 40rem;
+      }
+    }
+  }
+
+  &__img {
+    align-self: self-start;
+    position: relative;
+  }
+
+  &__title {
+    font-family: var(--font-family-2);
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    p:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.about-article.about-article--accented {
+  background: radial-gradient(ellipse closest-side, var(--clr-bg-circle), transparent 100%) left top / 100rem 50rem
+    no-repeat;
+
+  @media screen and (max-width: 680px) {
+    background: radial-gradient(ellipse closest-side, var(--clr-bg-circle), transparent 100%) right top 35rem / 100rem
+      50rem no-repeat;
+  }
+
+  .about-article__img {
+    padding-right: 7rem;
+
+    background: radial-gradient(circle closest-side, var(--clr-bg-circle-green), transparent 100%) right top / 35rem
+      35rem no-repeat;
+
+    @media screen and (max-width: 1200px) {
+      padding-right: 4rem;
+
+      background: radial-gradient(circle closest-side, var(--clr-bg-circle-green), transparent 100%) right top / 25rem
+        25rem no-repeat;
+    }
+
+    @media screen and (max-width: 968px) {
+      padding-right: unset;
+
+      background: radial-gradient(circle closest-side, var(--clr-bg-circle-green), transparent 100%) right bottom /
+        25rem 25rem no-repeat;
+    }
+
+    @media screen and (max-width: 680px) {
+      padding: 0 5rem;
+      width: 50rem;
+
+      background: radial-gradient(circle closest-side, var(--clr-bg-circle-green), transparent 100%) right top / 30rem
+        30rem no-repeat;
+    }
+  }
+}
+
+.about-article.about-article--offer {
+  .container {
+    display: block;
+    min-height: 30rem;
+  }
+
+  h2 {
+    @media screen and (max-width: 680px) {
+      font-size: 2.4rem;
+    }
+
+    @media screen and (max-width: 520px) {
+      font-size: 3rem;
+    }
+  }
+
+  .about-article__img {
+    float: left;
+    width: 35rem;
+    margin: 0 2rem 0 0;
+
+    @media screen and (max-width: 968px) {
+      width: 25rem;
+    }
+
+    @media screen and (max-width: 680px) {
+      width: 20rem;
+    }
+
+    @media screen and (max-width: 520px) {
+      float: unset;
+      width: 100%;
+      margin: 0 0 3rem 0;
+    }
+  }
+}
